@@ -1,0 +1,23 @@
+<template name="student">
+    <div id="studentBar" class="{{timeCheck timestamp}}">
+        <li>
+            <img src="{{pic}}" alt="default_tiny.png" class="profpic" id="tinypic">
+            
+            <strong>{{username}}</strong>
+
+            <div id="{{color tableLetter}}" class="tableBox">
+                {{tableLetter}} - {{tableNum}}
+            </div>  
+            
+            {{textHelper text}}
+
+            <br>
+            
+            <div id="time" class="light">
+                <input id="star" type="checkbox" {{checked}} class="toggle-checked" disabled="disabled" /><label for="star"></label>
+                <i class="fa fa-clock-o"></i> 
+                {{livestamp timestamp}}
+            </div>
+        </li>
+    </div>
+</template>

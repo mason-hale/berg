@@ -1,0 +1,67 @@
+<template name="homepage">
+        
+    <header class="bar bar-nav">
+        <h2 class="title">Berg</h2>
+        <button id="search-bar-button" class="btn pull-left">
+            <span class="icon icon-search"></span>
+        </button>
+        <button id="check-in-button" class="btn pull-right">
+            Check In
+        </button>
+        
+    </header>
+    
+    <div class="container">
+            
+        {{> searchBar}}
+        <div id="checkIn">
+            {{> checkInView}}
+        </div>
+
+        <ul class="table-view">
+
+        <!--List of starred students-->
+        {{#if anyStarred}}
+            <li class="table-view-divider">
+                <div id="star_icon" class="section_icon">★</div>
+                Starred by you
+            </li>
+        {{/if}}
+
+            {{#each starredStudents}}
+                {{> student}}
+            {{/each}}
+
+        <!-- List of user Facebook friends !-->
+        {{#if anyFriends}}
+            <li class="table-view-divider">
+                <img class="section_icon" src="FB-f-Logo__blue_144.png">
+                Your Facebook friends
+            </li>
+        {{/if}}
+
+            {{#each friends}}
+                {{> student}}
+            {{/each}}
+
+        <!-- List of all students who are checked-in !-->
+        <li class="table-view-divider">
+            <img class="section_icon" src="favicon-96x96.png">
+            Everyone in Annenberg
+        </li>
+            {{#each students}}
+                {{> student}}
+            {{/each}}
+        </ul>
+
+        <footer>
+            {{> footer}}
+        </footer>
+    </div>
+
+</template>
+
+<template name="layout">
+    {{> slideshow }}
+    {{> yield }}
+</template>

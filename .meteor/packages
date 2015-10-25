@@ -1,0 +1,19 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+accounts-ui
+mrt:moment
+meteorhacks:fast-render
+kevohagan:sweetalert
+
+accounts-facebook
+iron:router
+mdg:geolocation
+service-configuration
+axw:ratchet
+copleykj:livestamp
+maxkferg:facebook-collections
+http
